@@ -1,0 +1,5 @@
+page bandi
+mobile view
+slidePan select everywhere to close pan
+trash icon delete
+modal window for add and edit

@@ -1,0 +1,44 @@
+{% extends "user/base.html" %}
+
+{% block content %}
+
+    <div class="container-login">
+        <div class="wrap-login">
+        <form class="login-form" method="post" action="{% url 'edit_pass' id%}">
+            {% csrf_token %}
+            <span class="login-form-title">
+                Edit
+            </span>
+        
+            <div class="wrap-input">
+                <input class="input" type="text" name="name" placeholder="Name" value='{{initial.name}}' required>
+            </div>
+
+            <div class="wrap-input">
+                <input class="input" type="text" name="username" placeholder="Username" value='{{initial.username}}' required>
+            </div>
+
+            <div class="wrap-input">
+                <input class="input" type="text" name="password" placeholder="Password" value='{{initial.password}}' required>
+            </div>
+
+            <div class="container-login-form-btn">
+                <div class="wrap-login-form-btn">
+                    <div class="login-form-bgbtn"></div>
+                    <button class="login-form-btn" type="submit">
+                        Submit
+                    </button>
+                </div>
+            </div>
+
+        </form>
+        <div class="container-login-form-btn">
+            <div class="wrap-login-form-btn">
+                <div class="login-form-bgbtn"></div>
+                <a href="{% url 'display' %}"><button class="login-form-btn">Cancel</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

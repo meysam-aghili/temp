@@ -1,0 +1,41 @@
+{% extends "user/base.html" %}
+
+{% block content %}
+
+    <div class="container-login">
+        <div class="wrap-login">
+            <form name ="AddForm" class="login-form" method="post" action="{% url 'add_pass' %}" onsubmit="return validateAddForm()">
+                {% csrf_token %}
+                <span class="login-form-title">
+                    Add Password
+                </span>
+
+                <div class="wrap-input">
+                    <input class="input" type="text" name="name" placeholder="Name">
+                </div>
+
+                <div class="wrap-input">
+                    <input class="input" type="text" name="username" placeholder="Username" >
+                </div>
+
+                <div class="wrap-input">
+                    <input class="input" type="text" name="password" placeholder="Password" >
+                </div>
+
+                <div class="container-login-form-btn">
+                    <div class="wrap-login-form-btn">
+                        <div class="login-form-bgbtn"></div>
+                        <button class="login-form-btn" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+            <div class="container-login-form-btn">
+                <div class="wrap-login-form-btn">
+                    <div class="login-form-bgbtn"></div>
+                    <a href="{% url 'display' %}"><button class="login-form-btn">Cancel</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

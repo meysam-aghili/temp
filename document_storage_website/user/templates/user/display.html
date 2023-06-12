@@ -1,0 +1,61 @@
+{% extends "user/base.html" %}
+
+{% block content %}
+  <div class="display-body">
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="{% url 'logout' %}">Log Out</a>
+      
+    </div>
+
+    <div id="main">
+      <div>
+        <span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; More</span>
+      </div>
+      <div>
+        <a href="{% url 'add_pass' %}"><button class="button button-blue">Add</button></a>
+        <button class="button button-red" onclick="deletePass()">Delete</button>
+        <form id="delete-form" method="post" action="{% url 'delete_pass' %}">
+          {% csrf_token %}
+          <input id="delete-form-input" name="names" type="hidden" required>
+        </form>
+      </div>
+      <div class="table-container">
+        <table>
+          <tr>
+            <th style="width: 10px;"></th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Last Modified Date</th>
+            <th>Edit</th>
+          </tr>
+          {% for r in data %}
+          <tr>
+            <td><input id="{{r.name}}_check" type="checkbox" class="checkmark"></td>
+            <td> {{ r.name }}</td>
+            <td>{{ r.username }}</td>
+            <td>
+              <input id="{{r.name}}" type="password" class="inp-pass" value="{{ r.password }}" readonly="True">
+              <button onclick="showPass('{{r.name}}')"><i id="{{r.name}}_b" style='font-size:14px'
+                  class="fa fa-eye"></i></button>
+              <button onclick="CopyText('{{r.password}}')" data-toggle="tooltip" data-placement="top" title="Copy"><i
+                  style='font-size:14px' class='far'>&#xf24d;</i></button>
+            </td>
+            <td> {{ r.last_modified_date }}</td>
+            <td>
+              <button id="{{r.name}}_info"><a href="{% url 'edit_pass' r.id%}"><i style='font-size:15px'
+                    class='far'>&#xf044;</i></a></button>
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+
+
+
+    </div>
+  </div>
+  
+  {% endblock content %}
