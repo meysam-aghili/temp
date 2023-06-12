@@ -1,0 +1,3 @@
+.\py_3_8_10\python.exe .\uni_lp.py
+echo Finished...
+@pause

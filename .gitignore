@@ -1,1 +1,5 @@
 .venv
+__pycache__
+*.bz2
+py_3_8_10/
+LR.mp4
