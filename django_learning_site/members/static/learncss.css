@@ -1,0 +1,14 @@
+h1 {
+    background-color: green;
+    opacity: 0.3;
+  }
+  
+  div {
+    background-color: lightblue;
+    opacity: 0.3;
+  }
+  
+  p {
+    background-color: rgb(236, 236, 37);
+    opacity: 0.3;
+  }

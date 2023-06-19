@@ -1,0 +1,37 @@
+docker info
+docker container ls -a
+docker images
+docker rmi <image>
+docker run <image>
+docker run -it <image>
+docker ps -a (running images)
+docker pull <image>
+docker run <image>
+docker container prune
+docker rm <container_id>
+docker rm $(docker ps -aqf status=exited)
+docker attach <consignor_id>
+detach --> ctrl+p+q
+docker pause <container_id>
+docker unpause <container_id>
+docker stop <container_id>
+docker start <container_id>
+docker kill <container_id>
+docker commit -a <author> -m <message> <image>
+docker push <username>/<image>
+docker login
+docker exec
+docker build
+docker run .... -v <source>:<destination>
+
+
+docker rm $(docker ps -aq)
+docker run --rm -it --entrypoint bash 9fb7aa86e251
+docker build . -t registry-git.digikala.com/bi/logistics-dms-pack-routing-analysis
+docker run --rm -it 335c11ac539d /bin/sh --login
+docker run --rm -it 5e0779919acb bash
+docker rmi $(docker images -f "dangling=true" -q)
+docker-compose --profile flower up -d
+docker rmi $(docker images -f "dangling=true" -q)
+
+scp -r app .\requirements.txt meysam@172.16.135.71:\home\meysam\logistics-dms-pack-routing-analysis\

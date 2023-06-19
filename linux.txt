@@ -1,0 +1,53 @@
+pwd : print working directory
+info <command>: manual
+whatis <command> : tell us what the command is
+which <command> : tell us where the command is
+touch <file>
+apt install <app>
+history : commands history
+chmod <number> : change access mode of files
+chown <user> <file> : change owner of the file
+sleep <second>
+<command> > <file> : export command result into file
+<command> > <file> : append command result into file
+cat
+rm <file> (-r for recursive delete)
+less <file> : show file with page page
+<command> | <command> : make pipeline , first one will execute and give its result to the next one as input
+
+&& : and operator , if one of the commands fails none of them will be executed
+|| : or operator , if one of the commands fails next one will be executed
+!
+cp <file> <file> : copy file
+mkdir <name>
+find <filename>
+$PATH
+--------------------------
+sh or bash <file.sh>
+#!/bin/sh
+$1 : first arg
+$0 : all args
+$# : args count
+--------------------------
+for i in $(seq 1 10);
+do
+echo $i
+done
+--------------------------
+while <command>;
+do
+<command>
+done
+--------------------------
+curl -o <file> <url>
+--------------------------
+if [ <command> ];
+then
+<coomand>
+else
+<coomand>
+fi
+--------------------------
+-nt : is newer than
+-eq : is equal
+-d : is directory

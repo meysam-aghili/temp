@@ -1,0 +1,9 @@
+.overlay() --> 	union
+		intersect
+		symetric_differenec
+		difference
+.dissolve()
+.sjoin()
+Point()
+.centroid()
+.buffer()
