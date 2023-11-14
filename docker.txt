@@ -32,6 +32,9 @@ docker run --rm -it 335c11ac539d /bin/sh --login
 docker run --rm -it 5e0779919acb bash
 docker rmi $(docker images -f "dangling=true" -q)
 docker-compose --profile flower up -d
-docker rmi $(docker images -f "dangling=true" -q)
 
 scp -r app .\requirements.txt meysam@172.16.135.71:\home\meysam\logistics-dms-pack-routing-analysis\
+
+
+ docker volume rm $(docker volume ls -q --filter dangling=true)
+ docker volume prune
