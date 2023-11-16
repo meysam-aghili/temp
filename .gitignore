@@ -3,3 +3,7 @@ __pycache__
 *.bz2
 py_3_8_10/
 LR.mp4
+
+mbf/archive/app
+mbf/mbf_files
+mbf/*.exe
