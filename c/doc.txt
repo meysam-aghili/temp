@@ -1,0 +1,8 @@
+install C/C++ and C/C++ code runner extention in vscode
+download and install https://www.msys2.org/
+add C:\msys64 to PATH
+
+create .c or .h file
+compile it with C:\Windows\System32\cmd.exe '/d', '/c', 'gcc -Wall -Wextra -Wpedantic -Wshadow -Wformat=2 -Wcast-align -Wconversion -Wsign-conversion -Wnull-dereference -g3 -O0 -c d:\github\temp\c\proj\a.c -o .\build\Debug\a.o && gcc -Wall -Wextra -Wpedantic -Wshadow -Wformat=2 -Wcast-align -Wconversion -Wsign-conversion -Wnull-dereference -g3 -O0   .\build\Debug\a.o -o .\build\Debug\outDebug.exe'
+run it with C:/Windows/System32/cmd.exe /d /c .\build\Debug\outDebug.exe
+

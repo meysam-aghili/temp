@@ -7,3 +7,7 @@ LR.mp4
 mbf/archive/app
 mbf/mbf_files
 mbf/*.exe
+
+youtube/dl_files
+.vscode
+c/*/build
