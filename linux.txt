@@ -51,3 +51,6 @@ fi
 -nt : is newer than
 -eq : is equal
 -d : is directory
+
+---------------------------------------------
+show shared folders in vmware : sudo vmhgfs-fuse .host:/ /mnt/hgfs/ -o allow_other -o uid=1000
